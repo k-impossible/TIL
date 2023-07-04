@@ -1,7 +1,7 @@
 ## HTTP
 HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위한 프로토콜. 웹 브라우저와 웹 서버의 소통을 위해 디자인되었다. HTTP/1.1, HTTP/2는 TCP기반이며 HTTP/3는 UDP기반이다.
 
-![Alt text](./../../assets/http_version.png)
+![Alt text](./../../images/http_version.png)
 
 ### 특징
 - 클라이언트 서버 구조
@@ -47,7 +47,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
 - body : 요청이나 응답과 관련된 데이터 또는 문서를 포함. 요청과 응답의 유형에 따라 선택적으로 사용
 - start line과 HTTP headers를 묶어 요청,응답의 head라고 하고 payload는 body라고 한다.
 
-![HTTP Headers](./../../assets/http_headers.png)
+![HTTP Headers](./../../images/http_headers.png)
 
 #### Requests
 - Start line
@@ -63,7 +63,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
       - `OPTIONS * HTTP/1.1`
     - HTTP 버전에 따라 메시지 구조가 달라지며 start line에 HTTP버전을 함께 입력한다
 - Headers
-  - ![Request Headers](./../../assets/request_headers.png)
+  - ![Request Headers](./../../images/request_headers.png)
   - 요청의 Headers는 기본 구조를 따른다. 헤더 이름(대소문자 구분 없는 문자열),콜론(:), 값을 입력한다.
   - General headers : 메시지 전체에 적용되는 헤더. body를 통해 전송되는 데이터와는 관련 없음
   - Request headers : fetch를 통해 가져올 리소스나 클라이언트 자체에 대한 자세한 정보를 포함하는 헤더. User-Agent, Accept-Type, Accept-Language와 같은 헤더는 요청을 보다 구체화한다. Referer처럼 컨텍스트를 제공하거나 If-None과 같이 조건에 따라 제약을 추가할 수 있다.
@@ -80,7 +80,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
   - 상태 텍스트 - 상태 코드에 대한 설명
   - `HTTP/1.1 404 Not Found`
 - Headers
-  - ![Response Headers](./../../assets/response_headers.png)
+  - ![Response Headers](./../../images/response_headers.png)
   - 요청 헤더와 동일한 구조를 가진다.
   - Response headers : 위치 또는 서버 자체에 대한 정보(이름,버전 등)와 같이 응답에 대한 부가적인 정보를 갖는 헤더. Vary, Accept-Ranges와 같이 상태 줄에 넣기에는 공간이 부족했던 추가 정보를 제공
 - Body
@@ -94,7 +94,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
 
 ### 표현 헤더(Representation Headers)
 표현은 요청이나 응답에서 전달할 실제 데이터. 표현 헤더는 표현 데이터를 해석할 수 있는 정보 제공(데이터 유형,길이,압축 정보 등).
-![Representation Headers](./../../assets/representation_headers.png)
+![Representation Headers](./../../images/representation_headers.png)
 - Content-Type
   - 표현 데이터의 형식(미디어 타입, 문자 인코딩)
   - e.g. Text/html;charset=utf-8, application/json, Image/png ...
@@ -144,7 +144,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
 ### 콘텐츠 협상 헤더
 콘텐츠 협상(Content negotiation)은 클라이언트가 선호하는 표현 요청. 협상 헤더는 요청시에만 사용한다.
 
-![Content negotiation Headers](./../../assets/contentNego_headers.png)
+![Content negotiation Headers](./../../images/contentNego_headers.png)
 - Accept : 클라이언트가 선호하는 미디어 타입 전달
 - Accept-Charset : 클라이언트가 선호하는 문자 인코딩
 - Accept-Encoding : 클라이언트가 선호하는 압축 인코딩
