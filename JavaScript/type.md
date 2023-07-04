@@ -11,7 +11,7 @@ typeof "30" === "string" //true
 typeof {age: 30} === "object" //true
 typeof Symbol() === "symbol" //true
 ```
- * null은 falsy한 유일한 원시 값이지만 타입은 object이다.
+ * null은 `falsy`한 유일한 원시 값이지만 타입은 object이다.
 ```javascript
 typeof null === "object" //true
 ```
@@ -32,7 +32,7 @@ b; // Reference Error: b가 정의되지 않았습니다.
 typeof a; // "undefined"
 typeof b; // "undefined"
 ```
->"undefiend"는 접근 가능한 스코프에 변수가 선언되었으나 아무런 값도 없는 상태이고 "undeclared"는 접근 가능한 스코프에 변수 자체가 선언도 되지 않은 상태이다. 선언되지 않은 변수도 typeof하면 오류 처리를 하지않고 "undefiend"로 나온다.
+`"undefiend"는 접근 가능한 스코프에 변수가 선언되었으나 아무런 값도 없는 상태이고 "undeclared"는 접근 가능한 스코프에 변수 자체가 선언도 되지 않은 상태이다. 선언되지 않은 변수도 typeof하면 오류 처리를 하지않고 "undefiend"로 나온다.`
 
 
 
@@ -41,9 +41,9 @@ typeof b; // "undefined"
 ## 원시 자료형
 원시 자료형(primitve type)은 내장 타입 7가지 중에 object를 제외한 number, string, boolean, undefined, null, symbol 이 있다.
 #### 특징
->* 원시 자료형을 변수에 할당하면 메모리 공간에 값 자체가 저장된다.
->* 원시 값을 갖는 변수를 다른 변수에 할당하면 원시 값 자체가 복사되어 전달된다.
->* 원시 자료형은 변경 불가능한 값(immutable value)이다. 한 번 생성된 원시 자료형은 읽기 전용 값이다.
+* 원시 자료형을 변수에 할당하면 메모리 공간에 값 자체가 저장된다.
+* 원시 값을 갖는 변수를 다른 변수에 할당하면 원시 값 자체가 복사되어 전달된다.
+* 원시 자료형은 변경 불가능한 값(immutable value)이다. 한 번 생성된 원시 자료형은 읽기 전용 값이다.
 
 ```javascript
 let num = 20;
@@ -69,9 +69,9 @@ console.log(str); // states
 참조 자료형(reference type)은 원시 자료형이 아닌 모든 자료형을 말한다. 객체,배열,함수 등이 대표적인 참조 자료형이다.
 
 #### 특징
->* 참조 자료형을 변수에 할당하면 메모리 공간에 주소값이 저장된다.
->* 참조 값을 갖는 변수를 다른 변수에 할당하면 주소값이 복사되어 전달된다.
->* 참조 자료형은 변경이 가능한 값(mutable value)이다.
+* 참조 자료형을 변수에 할당하면 메모리 공간에 주소값이 저장된다.
+* 참조 값을 갖는 변수를 다른 변수에 할당하면 주소값이 복사되어 전달된다.
+* 참조 자료형은 변경이 가능한 값(mutable value)이다.
 
 ```javascript
 let arr = [0, 1, 2, 3];
@@ -177,5 +177,4 @@ console.log(arr[2] === copiedArr[2]) // false
 
 <br>
 
->참고자료 
-* You Don't Know JS - 타입과 문법, 스코프와 클로저
+> You Don't Know JS - 타입과 문법, 스코프와 클로저

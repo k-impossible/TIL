@@ -64,8 +64,9 @@ p의 첫번째 문자를 선택한다.
 
 * ::first-line ``p::first-line {...}``
 p의 첫번째 줄을 선택한다.
-> ::first-letter와, ::first-line은 블록 레벨의 요소에만 적용된다. 
-적용할 수 있는 속성 : font, color, background, margin, padding, border, text-decoration, vertical-align, line-height, float, clear
+
+` ::first-letter와, ::first-line은 블록 레벨의 요소에만 적용된다.` <br>
+`적용할 수 있는 속성 : font, color, background, margin, padding, border, text-decoration, vertical-align, line-height, float, clear`
 
 * ::marker ``::marker {...}``
 list item의 마커를 선택한다.
@@ -76,7 +77,6 @@ list item의 마커를 선택한다.
 
 <br>
 
->참고자료
-* [w3schools - css selectors](https://www.w3schools.com/css/css_selectors.asp)
-* [MDN - Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+>[w3schools - css selectors](https://www.w3schools.com/css/css_selectors.asp)<br/>
+[MDN - Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 

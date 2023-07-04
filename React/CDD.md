@@ -21,7 +21,7 @@ UI 컴포넌트를 재사용 가능한 컴포넌트 단위로 만들어서 협�
 #### Styled Components
 CSS in JS 라이브러리 중에서 현재 가장 인기 있는 라이브러리이다. CSS in JS 라이브러리를 사용하면 HTML + JS + CSS 까지 묶어서 하나의 JS파일 안에서 컴포넌트 단위로 개발할 수 있게 된다.
 
-[Styled Components 공식 홈페이지](https://styled-components.com/)
+
 
 ### StoryBook
 - CDD가 트렌드로 자리 잡게 되면서 이를 지원하는 도구 중 하나인 Component Explorer(컴포넌트 탐색기)가 등장했다. 다양한 UI 개발 도구 중에 하나가 StoryBook이다.
@@ -29,7 +29,7 @@ CSS in JS 라이브러리 중에서 현재 가장 인기 있는 라이브러리�
 - StoryBook은 재사용성을 확대하기 위해 컴포넌트를 문서화하고 자동으로 컴포넌트를 시각화하여 시뮬레이션할 수 있는 다양한 테스트 상태를 확인할 수 있다. 이를 통해 버그를 사전에 방지하고 테스트 및 개발 속도를 향상시킨다.
 - 기본적으로 독립적인 개발 환경에서 실행된다. 개발자는 어플리케이션의 다양한 상황에 구애받지 않고 UI 컴포넌트를 집중적으로 개발할 수 있다. 회사의 내부 개발자들을 위해 문서화해서 회사의 UI 라이브러리로써 사용하거나 외부 공개용 디자인 시스템을 개발하기 위한 기본 플랫폼으로 사용할 수 있다.
 
-[StoryBook 공식 홈페이지](https://storybook.js.org/)
+
 
 ### useRef
 리액트는 아래 예외적인 상황에서 useRef로 DOM 노드, 엘리먼트, React컴포넌트 주소값을 참조할 수 있게한다.
@@ -48,3 +48,7 @@ return (
         {/* 향후 다른 컴포넌트에서 input DOM 엘리먼트를 활용할 수 있다. */}
     </div>);
 ```
+<br>
+
+>[Styled Components 공식 홈페이지](https://styled-components.com/)<br>
+[StoryBook 공식 홈페이지](https://storybook.js.org/)

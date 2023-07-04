@@ -141,10 +141,6 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
 - Retry-After : 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
   - 503(Service Unavailable) : 서비스가 언제까지 불능인지 알려줄 수 있음
 
-[wikipedia - List of HTTP headers ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-
-<br/>
-
 ### 콘텐츠 협상 헤더
 콘텐츠 협상(Content negotiation)은 클라이언트가 선호하는 표현 요청. 협상 헤더는 요청시에만 사용한다.
 
@@ -158,3 +154,7 @@ HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위�
   - 0~1, 클수록 높은 우선순위
   - 생략하는 경우 1
   - `Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8;en;q=0.7`
+
+<br/>
+
+> [wikipedia - List of HTTP headers ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)

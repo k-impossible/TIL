@@ -84,5 +84,4 @@ html을 다운받는 동시에 js를 다운받고 페이지 렌더링이 완료�
 
 <br>
 
->참고자료
->* [javascript.info - defer,async 스크립트](https://ko.javascript.info/script-async-defer)
+> [javascript.info - defer,async 스크립트](https://ko.javascript.info/script-async-defer)

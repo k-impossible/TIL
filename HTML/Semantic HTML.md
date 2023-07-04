@@ -17,6 +17,6 @@
 - `<hgroup>` : 제목을 표시할 때 사용하는 요소. `<h1>` ~ `<h6>`
 - `<footer>` : 페이지나 요소의 최하단에 위치하는 꼬리말 역할의 요소
 
+<br>
 
-
-[MDN - Semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics)
+> [MDN - Semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics)

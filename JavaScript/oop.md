@@ -50,8 +50,7 @@ let morning = new Car("kia","모닝","black");
 morning.brand; // kia
 morining.refuel(); // 모닝에 연료를 주입합니다.
 ```
->* ES6부터는 class	 키워드를 사용해서 클래스를 생성한다. 속성을 정의할 때 constructor를 사용하는데 인스턴스를 초기화할 때 실행되는 생성자 함수이다.
->* new키워드로 인스턴스를 생성할 때 해당 인스턴스가 this의 값이 된다.
+`ES6부터는 class	 키워드를 사용해서 클래스를 생성한다. 속성을 정의할 때 constructor를 사용하는데 인스턴스를 초기화할 때 실행되는 생성자 함수이다. new키워드로 인스턴스를 생성할 때 해당 인스턴스가 this의 값이 된다.`
 
 <br>
 
@@ -76,7 +75,7 @@ testClass.prototype = new MotherClass();
 let test = new testClass();
 test.work(); // work!
 ```
-> testClass에서 work메서드가 재정의 되지 않으면 Error:50을 발생시킨다. 프로토타입을 이용하면 간접적인 제약을 줘서 인터페이스 처럼 구현할 수 있다. 
+`testClass에서 work메서드가 재정의 되지 않으면 Error:50을 발생시킨다. 프로토타입을 이용하면 간접적인 제약을 줘서 인터페이스 처럼 구현할 수 있다.`
 
 #### private 키워드의 부재
 객체 지향 프로그래밍 언어에서는 외부에 노출시키지 않을 속성과 메서드를 구분하기 위해 `private` 키워드가 제공되지만 자바스크립트에서는 해당 키워드가 없다. 자바스크립트에서 은닉화를 하기 위한 일반적인 방법으로 클로저 모듈 패턴을 사용했고 ES2019부터 은닉화를 위한 `#` 키워드를 제공해서 사용 할 수 있다.
@@ -104,9 +103,8 @@ console.log(sum(6)); //11
 
 <br>
 
->참고자료
-* [MDN - OOP](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-* [MDN - Private class features](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-* [javascript.info - class](https://ko.javascript.info/class)
+> [MDN - OOP](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)<br>
+[MDN - Private class features](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)<br>
+[javascript.info - class](https://ko.javascript.info/class)
 
 

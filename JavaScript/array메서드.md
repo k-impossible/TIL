@@ -32,7 +32,7 @@ console.log(arr) // [1,2]
 arr.splice(2,0,3,4) // return : [] (사라지는 값이 들어간 새로운 배열)
 console.log(arr) // [1,2,3,4]
 ```
->추가,삭제 시 push,pop은 배열 마지막에서 동작하는 반면 shift, unshift는 배열 맨 앞에서 동작하기 때문에 배열 전체 요소들이 이동해야 하므로 효율이 좋지 않다.
+`추가,삭제 시 push,pop은 배열 마지막에서 동작하는 반면 shift, unshift는 배열 맨 앞에서 동작하기 때문에 배열 전체 요소들이 이동해야 하므로 효율이 좋지 않다.`
 
 <br>
 
@@ -116,7 +116,7 @@ const result = array.slice(2,4)
 console.log(array) // [ 1, 2, 3, 4, 5 ]
 console.log(result) // [ 3, 4 ]
 ```
->splice()와 비슷하게 동작하지만 splice()는 원본 배열을 변경시킴
+`splice()와 비슷하게 동작하지만 splice()는 원본 배열을 변경시킴`
 
 <br>
 
@@ -128,7 +128,7 @@ const result = array.find(element => element > 1000);
 
 console.log(result) // 4000
 ```
->만족하는 요소가 없다면 undefined 반환 
+`만족하는 요소가 없다면 undefined 반환`
 
 <br>
 
@@ -140,7 +140,7 @@ const result = array.filter(element => element < 100);
 
 console.log(result) // [ 10, 54 ]
 ```
->어떤 요소도 만족하지 못하면 빈 배열 반환
+`어떤 요소도 만족하지 못하면 빈 배열 반환`
 
 <br>
 
@@ -165,7 +165,7 @@ const result2 = array.every(element => element < 500);
 console.log(result) // true
 console.log(result2) // false
 ```
->every()는 모든 배열 요소가 조건에 만족해야 true 반환
+`every()는 모든 배열 요소가 조건에 만족해야 true 반환`
 
 <br>
 
@@ -179,13 +179,12 @@ const result2 = array.reduce((prev,current) => prev + current,5);
 console.log(result) // 160
 console.log(result) // 165
 ```
->* prev : 누적 값이 저장되는 인자
->* current: 처리할 현재 배열 요소
->* 콜백 최초 호출 시, initialValue를 제공한 경우 prev는 initialValue와 같고 current는 배열의 첫번째 값과 같다. 제공하지 않았다면 prev는 배열의 첫번째 값과 같고 current는 배열의 두번째 값과 같다.
->* reduceRight()는 배열의 마지막 부터 계산을 진행한다.
+* prev : 누적 값이 저장되는 인자
+* current: 처리할 현재 배열 요소
+* 콜백 최초 호출 시, initialValue를 제공한 경우 prev는 initialValue와 같고 current는 배열의 첫번째 값과 같다. 제공하지 않았다면 prev는 배열의 첫번째 값과 같고 current는 배열의 두번째 값과 같다.
+* reduceRight()는 배열의 마지막 부터 계산을 진행한다.
 
 <br>
 
->참고자료
->* [MDN - JavaScript Array](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
->* [드림코딩 - 자바스크립트 9. 유용한 10가지 배열 함수들. Array APIs 총정리 | 프론트엔드 개발자 입문편 ( JavaScript ES6)](https://www.youtube.com/watch?v=3CUjtKJ7PJg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=10)
+
+>[MDN - JavaScript Array](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)

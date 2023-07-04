@@ -37,4 +37,6 @@
 - 이러한 쿠키의 특성을 이용해 서버는 클라이언트에 인증정보를 담은 쿠키를 전송하고 클라이언트는 전달받은 쿠키를 서버에 요청과 함께 전송해 Stateless한 인터넷 연결을 Stateful하게 유지할 수 있다.
 - 하지만 기본적으로 쿠키는 오랜 시간 동안 유지될 수 있고 HttpOnly옵션을 사용하지 않았다면 자바스크립트를 이용해서 쿠키에 접근할 수 있기 때문에 쿠키에 민감한 정보를 담는 것은 위험하다.
 
-[MDN - Set-Cookie Attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+> [MDN - Set-Cookie Attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+
+## Session

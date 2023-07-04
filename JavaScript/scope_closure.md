@@ -18,9 +18,9 @@ printLog() // "Hello JS"
 console.log(globalValue) // "Hello JS"
 console.log(localValue) // ReferenceError
 ```
->* 중괄호로 감싼 범위는 블록 스코프(block scope)
->* 함수로 감싼 범위는 함수 스코프(function scope)
->* 화살표 함수는 블록 스코프에 속한다.
+* 중괄호로 감싼 범위는 블록 스코프(block scope)
+* 함수로 감싼 범위는 함수 스코프(function scope)
+* 화살표 함수는 블록 스코프에 속한다.
 
 ### 변수 선언
 ES6부터 javascript에서 변수를 선언하는 방법에 let, const 키워드가 생겼다. 그 이전에는 var 키워드를 썼는데 예측하기 어려운 문제들을 방지하기 위해 쓰지 않는다.
