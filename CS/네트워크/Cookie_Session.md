@@ -39,4 +39,47 @@
 
 > [MDN - Set-Cookie Attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
 
+![CooKie_Session](./../../assets/cookie_session.png)
 ## Session
+쿠키와 달리 중요한 데이터는 서버에서 관리하고 서버가 클라이언트(쿠키)에 유일하고 암호화된 ID를 부여한다. 서버로 인증 과정을 한번 더 거치기 때문에 쿠키보다는 안전하지만 대규모 서비스일 경우 서버 메모리에 부담을 줘서 서버 성능 저하를 일으킬 수 있고 쿠키의 단점인 XSS공격에 취약한 점도 그대로 존재한다.
+### 세션 기반 인증
+- 로그인
+  - 사용자가 웹사이트에서 로그인을 시도할 때 정확한 아이디,비밀번호를 입력했다면 서버는 인증에 성공했다고 판단한다.
+  - 이때 서버는 사용자가 인증에 성공했음을 알고 있어야 하고 클라이언트는 인증 성공을 증명할 수단을 갖고 있어야 한다.
+  - 사용자가 인증에 성공한 상태는 세션이라고 부른다. 서버는 일종의 저장소에 세션을 저장한다. 주로 in-memory 또는 세션 스토어에 저장한다.
+  - 세션이 만들어지면 각 세션을 구분할 수 있는 세션 아이디도 만들어지는데 클라이언트에 세션 성공을 증명할 수단으로써 세션 아이디를 전달한다.
+  - 이때 웹사이트에서 로그인을 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키에는 서버에서 발급한 세션 아이디를 저장한다.
+- 로그아웃
+  - 서버에서는 세션 정보를 삭제해야 하고 클라이언트에서는 쿠키를 변경하거나 삭제해야 한다.
+  - 클라이언트에서 세션 정보를 없애기 위해서는 `res.cookie`로 쿠키의 값을 무효한 값으로 변경하거나 `res.clearCookie`로 쿠키를 삭제해 버리면 된다.
+
+### express-session
+Node.js에는 세션을 대신 관리해 주는 `express-session`이라는 모듈이 있다. 세션을 위한 미들웨어로 express 서버에서 쉽게 세션을 위한 공간을 다룰 수 있도록 만들어준다.
+```js
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+app.use(
+  session({
+    secret: '@codestates',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      domain: 'localhost',
+      path: '/',
+      maxAge: 24 * 6 * 60 * 10000,
+      sameSite: 'none',
+      httpOnly: false,
+      secure: true,
+    },
+  })
+);
+```
+- 쿠키 옵션과 비슷해 보이지만 세션의 경우 `secret`옵션의 비밀키를 이용해 암호화해 세션 아이디를 생성한다. 그리고 이것을 클라이언트에게 쿠키로 전송한다. 
+- 쿠키로 전송된 세션 아이디는 이에 종속되는 고유한 세션 객체를 가지며 서버에 저장된다. 세션 객체는 유저별로 독립적으로 생성된 객체이므로 각각 다른 데이터를 저장할 수 있다.
+- 따라서 클라이언트에 유저의 개인정보를 담지 않고도 서버가 클라이언트의 세션 아이디를 이용해 유저의 인증여부를 판단할 수 있다.
+- 세션 객체는 `req.session`으로 접근할 수 있으며 이를 통해 세션에 임의의 데이터를 저장하거나 불러올 수 있다.
+
+> [GitHub: express-session](https://github.com/expressjs/session#reqsession)
